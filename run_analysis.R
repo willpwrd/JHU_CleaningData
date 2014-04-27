@@ -11,3 +11,9 @@ stds <- feature_data[std_ind,]
 
 #Merge the data
 merged_data <- rbind(means,stds)
+
+#Combine test/train data
+test_X <- read.table("test/X_test.txt")
+train_X <- read.table("train/X_train.txt")
+
+combined_data <- rbind(test_X, train_X)
